@@ -10,7 +10,7 @@
 
 <div class="screensaver">
       <video width="100%" height="100%" class="screensaver-vid" muted loop>
-        <source src="imgs/screensaver.mp4">
+        <source src="imgs/screensaver.mp4" type="video/mp4">
       </video> 
 </div>
 
@@ -59,12 +59,12 @@ $( document ).ready(function() {
   ifvisible.setIdleDuration(10);
   ifvisible.on("idle", function () {
     $('.screensaver').fadeIn('slow');
-    $('.screensaver-vid').play();
+    $('.screensaver-vid').trigger('play');
   });
   // If click on screensaver then show homepage
   $('.screensaver').click(function (e) {
     $(this).fadeOut('fast');
-    $('.screensaver-vid').pause();
+    $('.screensaver-vid').trigger('pause');
   });
 
 });
