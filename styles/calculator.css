@@ -128,8 +128,6 @@ table {
 }
 #switchboardCalc {
   background: #E4E4E4;
-  max-height: 100vh;
-  overflow: hidden;
 }
 #hero.hero-calc {
   height: 250px;
@@ -649,8 +647,7 @@ table {
 }
 #results {
   right: 0;
-  position: -webkit-sticky;
-  position: sticky;
+  position: absolute;
   top: 0;
   float: right;
 }
@@ -697,8 +694,7 @@ table {
   background: -o-linear-gradient(top, #F7604F 0%, #870735 100%);
   background: linear-gradient(180deg, #F7604F 0%, #870735 100%);
   padding-bottom: 1px;
-  position: -webkit-sticky;
-  position: sticky;
+  position: absolute;
   top: 0;
 }
 @media only screen and (max-width: 530px), only screen and (min-width: 530px) and (max-width: 830px) {

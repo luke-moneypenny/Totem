@@ -151,25 +151,4 @@ $(document).ready(function () {
         );
     };
 
-        
-
-        
-    $(window).scroll(function () {
-
-        /*FOLLOW PAGE*/
-       if ($("#NI").isOnScreen()) {
-           $(window).scroll(function () {
-               $('#results').addClass('results--sticky');
-           });
-       }
-
-        /*SCROLL BACK UP*/
-       else if ($("#hero").isOnScreen()) {
-           $(window).scroll(function () {
-               $('#results').removeClass('results--sticky');
-           });
-       } 
-   });
-  
-
 });
