@@ -1,0 +1,155 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../styles/calculator.css">
+	<link rel="stylesheet" type="text/css" href="../resources/jquery-ui-1.12.1/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../resources/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+	<link rel="stylesheet" type="text/css" href="../resources/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<a href="../index.html">
+	<div class="returntohome">
+		<?xml version="1.0" encoding="iso-8859-1"?>
+		<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512; fill: #870735;" xml:space="preserve">
+			<g>
+				<g>
+					<path d="M267.312,171.312l-22.624-22.624l-96,96c-6.256,6.256-6.256,16.368,0,22.624l96,96l22.624-22.624L182.624,256
+						L267.312,171.312z"/>
+				</g>
+			</g>
+			<g>
+				<g>
+					<path d="M363.312,171.312l-22.624-22.624l-96,96c-6.256,6.256-6.256,16.368,0,22.624l96,96l22.624-22.624L278.624,256
+						L363.312,171.312z"/>
+				</g>
+			</g>
+			<g>
+				<g>
+					<path d="M480,0H32C14.352,0,0,14.352,0,32v448c0,17.648,14.352,32,32,32h448c17.648,0,32-14.352,32-32V32
+						C512,14.352,497.648,0,480,0z M480,480l-448,0.016V32h448V480z"/>
+				</g>
+			</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+		</svg>
+	</div>
+</a>
+
+<div id="switchboardCalc">
+
+        <section id="hero" class="hero-calc">
+                <div class="content">
+                    <h1 class="content__title">What is your switchboard really costing you?</h1>
+                    <p class="content__desc">Input your data (or use national averages) to find out exactly how much.</p>
+                </div>
+        </section>
+
+        <div class="container">
+
+            <section id="data" class="data">
+                <h3 class="data-title" id="dataTitle">Calculate the true cost</h3>
+                <ul class="data-form">
+                    <li class="data-form__question">
+                        <h3 class="data-form__question__title">How many switchboard operators do you employ?</h3>
+                        <div class="data-form__question__info">i</div>
+                        <p class="data-form__question__desc">Enter any part-time staff as a fraction e.g. 2.5.</p>
+                        <input type="text" onfocus="this.value=''" class="data-form__question__text" id="staffNo"/>
+                        <div class="error" id="staffError">Please enter a valid number</div>
+                    </li>
+                    <li class="data-form__question">
+                        <h3 class="data-form__question__title">What is the base salary of your switchboard operators?</h3>
+                        <div class="data-form__question__info">i</div>
+                        <p class="data-form__question__desc">According to Totaljobs, the average salary for a London-based receptionist is £23,000.</p>
+                        <label class="data-form__question__money">£</label>
+                        <input type="text" onfocus="this.value=''" class="data-form__question__text data-form__question__text--padding" id="salary"/>
+                        <div class="error" id="salaryError">Please enter a valid number</div>
+                    </li>
+                    <li class="data-form__question">
+                        <h3 class="data-form__question__title">National Insurance</h3>
+                        <div class="data-form__question__info">i</div>
+                        <p class="data-form__question__desc">0% for the first £8268 of earnings, 13.8% applied thereafter.</p>
+                        <div class="data-form__question__text data-form__question__text--only" id="NI"></div>
+                        <label class="data-form__question__only">£</label>
+                    </li>
+                    <li class="data-form__question">
+                        <h3 class="data-form__question__title">How much do you contribute to their pension?</h3>
+                        <div class="data-form__question__info">i</div>
+                        <p class="data-form__question__desc">According to AON’s Benefits and Trends survey the average employer contribution is 5.6%. For most employers the statutory minimum is 3%.</p>
+                        <div id="pension">
+                            <div id="pensionHandle" class="ui-slider-handle">5%</div>
+                            <span class="sliderLabel sliderLabel--zero">0%</span>
+                            <span class="sliderLabel sliderLabel--1"></span>
+                            <span class="sliderLabel sliderLabel--2"></span>
+                            <span class="sliderLabel sliderLabel--3"></span>
+                            <span class="sliderLabel sliderLabel--4"></span>
+                            <span class="sliderLabel sliderLabel--5"></span>
+                            <span class="sliderLabel sliderLabel--6"></span>
+                            <span class="sliderLabel sliderLabel--7"></span>
+                            <span class="sliderLabel sliderLabel--8"></span>
+                            <span class="sliderLabel sliderLabel--9"></span>
+                            <span class="sliderLabel sliderLabel--10">10%</span>
+                        </div>
+                    </li>
+                    <li class="data-form__question">
+                        <h3 class="data-form__question__title">How much are other benefits worth?</h3>
+                        <div class="data-form__question__info">i</div>
+                        <p class="data-form__question__desc">According to HMRC statistics , the average value of taxable benefits is 8.6% of salary. For example, health insurance, subsidised lunches, gym memberships, loyalty reward programmes.</p>
+                        <div id="benefits">
+                            <div id="benefitsHandle" class="ui-slider-handle">9%</div>
+                            <span class="sliderLabel sliderLabel--zero">0%</span>
+                            <span class="sliderLabel sliderLabel--1"></span>
+                            <span class="sliderLabel sliderLabel--2"></span>
+                            <span class="sliderLabel sliderLabel--3"></span>
+                            <span class="sliderLabel sliderLabel--4"></span>
+                            <span class="sliderLabel sliderLabel--5"></span>
+                            <span class="sliderLabel sliderLabel--6"></span>
+                            <span class="sliderLabel sliderLabel--7"></span>
+                            <span class="sliderLabel sliderLabel--8"></span>
+                            <span class="sliderLabel sliderLabel--9"></span>
+                            <span class="sliderLabel sliderLabel--10">10%</span>
+                        </div>
+                    </li>
+                    <li class="data-form__question">
+                        <h3 class="data-form__question__title">How much time do you spend per person on training and management per week?</h3>
+                        <div class="data-form__question__info">i</div>
+                        <p class="data-form__question__desc">A 2014 study by Leadership IQ found that the optimal amount of time to spend interacting with one’s leader is 6 hours.</p>
+                        <label class="data-form__question__hours">hrs</label>
+                        <input type="text" onfocus="this.value=''" class="data-form__question__text" id="time"/>
+                        <div class="error" id="timeError">Please enter a valid number</div>
+                    </li>
+                    <li class="data-form__question">
+                        <h3 class="data-form__question__title">How much do spend on infrastructure to support each operator per year?</h3>
+                        <div class="data-form__question__info">i</div>
+                        <p class="data-form__question__desc">The IPD Blue Chip Office Index put the average total cost of office space and equipment per occupant at £4,800.</p>
+                        <label class="data-form__question__money">£</label>
+                        <input type="text" onfocus="this.value=''" class="data-form__question__text data-form__question__text--padding" id="expenses"/>
+                        <div class="error" id="expensesError">Please enter a valid number</div>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="results" class="results">
+                <div class="results-box" id="resultsBox">
+                    <img class="results-box__PA" src="https://res.cloudinary.com/moneypenny/image/upload/f_auto/v1/Calculators/Group_1161.png"/>
+                    <div class="results-box__result">
+                        <p class="results-box__result__text">
+                            Your switchboard costs...<br />
+                            <span id="finalAmount">£0</span>
+                        </p>
+                    </div>
+                    <p class="results-box__text">Outsource some or all of your switchboard calls to Moneypenny to save between 30-60%.</p>
+                </div>
+                
+            </section>
+        </div>
+    </div>
+
+</body>
+
+
+<script src="../resources/jquery-3.4.1.min.js"></script>
+<script src="../resources/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../resources/calculator.js"></script>
+
+
+</html>

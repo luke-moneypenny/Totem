@@ -1,0 +1,250 @@
+@font-face {
+	font-family: "Lato";
+	src: url("../resources/Lato/Lato-Light.ttf");
+}
+
+
+html, body {
+	margin: 0;
+}
+
+.returntohome {
+	position: fixed;
+	width: 75px;
+	height: 75px;
+	display: block;
+
+	bottom: 10px;
+	right: 10px;
+	z-index: 100;
+}
+
+.returntohome-tasfinish {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	display: block;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	transition-property: all;
+	transition-timing-function: ease;
+	transition-duration: .5s;
+}
+
+.screensaver {
+	position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    display: none;
+    background: #FFF;
+}
+
+/*** Home ***/
+
+.content {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.hero {
+	height: 30%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.nav {
+	width: 100%;
+	height: 40%;
+	position: relative;
+
+	.pod {
+		width: 50%;
+		height: 50%;
+		display: block;
+		position: absolute;
+		font-size: 36px;
+		font-family: 'Lato', sans-serif;
+		color: #FFF;
+
+		p {
+			position: absolute;
+			text-align: center;
+			margin: 0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.slides {
+		top: 0%;
+		left: 0%;
+		background-color: #731266;
+	}
+
+	.calc {
+		top: 0%;
+		left: 50%;
+		background-color: #E55204;
+	}
+
+	.office {
+		top: 50%;
+		left: 0%;
+		background-color: #FD9F0A;
+	}
+
+	.services {
+		top: 50%;
+		left: 50%;
+		background-color: #00AFAA;
+	}
+}
+
+.game {
+	width: 100%;
+	height: 30%;
+	background-color: #E55204;
+	position: relative;
+
+	svg {
+		position: absolute;
+		margin: 0;
+		width: 480px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+/*** TAS ***/
+
+.ss {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	transition-property: all;
+	transition-timing-function: ease;
+	transition-duration: .5s;
+	overflow: hidden;
+
+	&__container {
+		height: 1000px;
+		width: 800px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.slide {
+		position: absolute;
+		text-align: center;
+		color: #FFF;
+		font-family: 'Lato', sans-serif;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+	}
+
+	.slidephone {
+		width: 320px;
+		margin: 0 auto;
+		transition-property: all;
+		transition-timing-function: ease;
+		transition-duration: .5s;
+		-webkit-backface-visibility: hidden;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.disappear {
+		opacity: 0;
+		visibility: none;
+		transition: all 1s ease;
+	}
+
+	.phoneani-off {
+		opacity: 0;
+		transform: translateX(1000px) translateY(50px) scale(.8);
+	}
+
+	.phoneani-on {
+		opacity: 1;
+		transform: translateX(0px) translateY(0px) scale(1);	
+		transition-delay: .5s;	
+	}
+
+	.phoneani-exit {
+		opacity: 0;
+		transform: translateX(-1000px) translateY(50px) scale(.8);
+	}
+
+	.slidetext {
+		margin-bottom: 150px;
+		font-size: 56px;
+		transition-property: all;
+		transition-timing-function: ease;
+		transition-duration: 1s;
+		-webkit-backface-visibility: hidden;
+	}
+
+	.textani-off {
+		opacity: 0;
+		transform: scale(.5);
+	}
+
+	.textani-on {
+		opacity: 1;
+		transform: scale(1);
+		transition-delay: .5s;
+	}
+
+	&__slide1 {
+
+		&__title {
+			font-size: 56px;
+			width: 100%;
+			margin-top: 0;
+		}
+
+		&__text {
+			font-size: 26px;
+		}
+
+		svg {
+			animation: shake-animation 5s ease infinite;
+		}
+	}
+}
+
+
+/*** Animations ***/
+
+@keyframes shake-animation {
+	0% { transform:translate(0,0) }
+	1.78571% { transform:translate(5px,0) }
+	3.57143% { transform:translate(0,0) }
+	5.35714% { transform:translate(5px,0) }
+	7.14286% { transform:translate(0,0) }
+	8.92857% { transform:translate(5px,0) }
+	10.71429% { transform:translate(0,0) }
+	100% { transform:translate(0,0) }
+}
