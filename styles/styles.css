@@ -41,7 +41,14 @@ html, body {
   height: 100vh;
   z-index: 999;
   display: none;
-  background: #FFF; }
+  background: #FFF;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.screensaver-vid {
+  width: 100%; }
 
 /*** Home ***/
 .content {
@@ -225,6 +232,28 @@ html, body {
   .ss__slide1 svg {
     -webkit-animation: shake-animation 5s ease infinite;
     animation: shake-animation 5s ease infinite; }
+
+/*** Office ***/
+.office {
+  background: #E55204;
+  height: 100vh;
+  overflow: hidden; }
+  .office svg {
+    width: 500px;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .office .slickcontainer {
+    height: 665px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
 
 /*** Animations ***/
 @-webkit-keyframes shake-animation {

@@ -242,6 +242,32 @@ html, body {
 }
 
 
+/*** Office ***/
+
+.office {
+
+	background: #E55204;
+	height: 100vh;
+	overflow: hidden;
+
+	svg {
+		width: 500px;
+    	position: absolute; 
+    	top: 170px;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+
+	.slickcontainer {
+		height: 665px;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+
 /*** Animations ***/
 
 @keyframes shake-animation {
