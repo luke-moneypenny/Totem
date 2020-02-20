@@ -38,12 +38,55 @@ html, body {
 	position: absolute;
     width: 100%;
     height: 101vh;
-    z-index: 999;
-    display: none;
-    background: #FFF;
+    z-index: 9999;
     top: 50%;
     transform: translateY(-50%);
     overflow: hidden;
+	transition-property: all;
+	transition-timing-function: ease;
+	transition-duration: .5s;
+
+	img {
+		width: 700px;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.taptostart {
+
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		top: 50%;
+
+		p {
+			color: #FFF;
+			font-size: 42px;
+			font-family: 'Lato', sans-serif;
+		}
+	
+		svg {
+			animation: shake-animation 5s ease infinite;
+		}
+	}
+}
+
+.orange {
+	background: #E55204;
+}
+
+.purple {
+	background: #731266;
+}
+
+.yellow {
+	background: #FD9F0A;
+}
+
+.teal {
+	background: #00AFAA;
 }
 
 .screensaver-vid {

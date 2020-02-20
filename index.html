@@ -12,10 +12,17 @@
 <body>
 
 
-<div class="screensaver">
+<div class="screensaver orange disappear">
 <!--       <video class="screensaver-vid" muted loop>
         <source src="imgs/screensaver.mp4" type="video/mp4">
       </video>  -->
+    <img src="imgs/logo.png">
+
+    <div class="taptostart">
+		<p>Tap to start</p>
+
+		<svg height='100px' width='100px' fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve"><path d="M49.977,28.272c-0.765,0.764-0.765,2.004,0,2.768c0.379,0.384,0.887,0.572,1.383,0.572c0.504,0,1.004-0.192,1.393-0.572  c8.4-8.404,8.4-22.072,0-30.476c-0.76-0.76-2.012-0.76-2.771,0c-0.765,0.764-0.765,2.012,0,2.772  C56.844,10.208,56.844,21.4,49.977,28.272z"></path><path d="M23.652,31.616c0.5,0,1-0.192,1.388-0.572c0.764-0.764,0.764-2.004,0-2.768c-6.872-6.872-6.872-18.06,0-24.932  c0.764-0.76,0.764-2.008,0-2.771c-0.764-0.76-2.008-0.76-2.768,0c-8.404,8.412-8.404,22.076,0,30.476  C22.648,31.428,23.148,31.616,23.652,31.616z"></path><path d="M74.561,40.62c-1.608,0-3.108,0.468-4.353,1.272C69.132,38.908,66.176,36.7,62.8,36.7c-1.604,0-3.104,0.468-4.352,1.272  c-1.076-2.988-4.028-5.192-7.404-5.192c-1.428,0-2.772,0.372-3.92,1.012v-16.96c0-4.164-3.512-7.56-7.836-7.56  c-4.248,0-7.836,3.504-7.836,7.644V48.84l-5.056-5.484c-2.856-2.856-7.728-2.752-10.668,0.184c-2.984,2.988-2.584,8.912-0.24,12.216  c1.756,2.48,3.896,7.264,6.156,12.34C27.476,81.176,34.084,96,43.332,96h22.141c0.359,0,0.728-0.096,1.035-0.296  C67.156,95.3,82.389,85.648,82.389,69.46V48.256C82.396,44.124,78.805,40.62,74.561,40.62z"></path><path d="M26.62,26.528c0.28,0.276,0.62,0.476,0.916,0.732V16.916c0-6.268,5.384-11.556,11.756-11.556  c6.484,0,11.756,5.148,11.756,11.476v5.984c3.068-5.812,2.228-13.168-2.656-18.06c-6-5.996-15.768-5.996-21.772,0  C20.616,10.756,20.616,20.516,26.62,26.528z"></path></svg>
+	</div>
 </div>
 
 <div class="content">
@@ -63,17 +70,39 @@
 
 $( document ).ready(function() {
 
-/*
-  ifvisible.setIdleDuration(6);
+
+  ifvisible.setIdleDuration(10);
   ifvisible.on("idle", function () {
-    $('.screensaver').fadeIn('slow');
-    $('.screensaver-vid').trigger('play');
+    $('.screensaver').removeClass('disappear');
   });
 
   $('.screensaver').click(function (e) {
-    $(this).fadeOut('fast');
-    $('.screensaver-vid').trigger('pause');
-  });*/
+    $('.screensaver').addClass('disappear');
+  });
+
+window.setInterval(function(){
+  
+	if ($('.screensaver').hasClass('orange')) {
+		$('.screensaver').addClass('purple');
+		$('.screensaver').removeClass('orange');
+	} 
+
+	else if ($('.screensaver').hasClass('purple')) {
+		$('.screensaver').addClass('yellow');
+		$('.screensaver').removeClass('purple');
+	} 
+
+	else if ($('.screensaver').hasClass('yellow')) {
+		$('.screensaver').addClass('teal');
+		$('.screensaver').removeClass('yellow');
+	} 
+
+	else if ($('.screensaver').hasClass('teal')) {
+		$('.screensaver').addClass('orange');
+		$('.screensaver').removeClass('teal');
+	} 
+
+}, 5000);
 
 });
 
