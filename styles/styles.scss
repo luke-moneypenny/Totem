@@ -43,10 +43,17 @@ html, body {
     background: #FFF;
     top: 50%;
     transform: translateY(-50%);
+    overflow: hidden;
 }
 
 .screensaver-vid {
 	width: 100%;
+}
+
+.disappear {
+	opacity: 0;
+	visibility: none;
+	transition: all 1s ease;
 }
 
 /*** Home ***/
@@ -181,12 +188,6 @@ html, body {
 		}
 	}
 
-	.disappear {
-		opacity: 0;
-		visibility: none;
-		transition: all 1s ease;
-	}
-
 	.phoneani-off {
 		opacity: 0;
 		transform: translateX(1000px) translateY(50px) scale(.8);
@@ -264,6 +265,21 @@ html, body {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		transition: all 1s ease;
+	}
+
+	.loader {
+		width: 150px;
+		height: 150px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		img {
+			width: 100%;
+			animation: spin 2s ease infinite;
+		}
 	}
 }
 
@@ -280,3 +296,6 @@ html, body {
 	10.71429% { transform:translate(0,0) }
 	100% { transform:translate(0,0) }
 }
+
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

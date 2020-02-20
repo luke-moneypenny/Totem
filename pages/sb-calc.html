@@ -12,6 +12,10 @@
 </head>
 <body>
 
+<div class="refresh">
+    <img src="../imgs/refresh.png">
+</div>
+
 <a href="../index.html">
 	<div class="returntohome">
 		<?xml version="1.0" encoding="iso-8859-1"?>
@@ -155,6 +159,16 @@
 <script src="../resources/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 <script src="../resources/jquery-ui-1.12.1/jquery.ui.touch-punch.min.js"></script>
 <script src="../resources/calculator.js"></script>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+    $('.refresh').click(function() {
+        location.reload();
+    });
+});
+
+</script>
 
 
 </html>

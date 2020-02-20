@@ -1094,3 +1094,19 @@ table {
   right: 10px;
   z-index: 100;
 }
+
+.refresh {
+  position: fixed;
+  width: 75px;
+  height: 75px;
+  display: block;
+  text-align: center;
+
+  bottom: 95px;
+  right: 10px;
+  z-index: 100;
+}
+
+.refresh img {
+  width: 80%;
+}

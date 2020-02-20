@@ -45,10 +45,18 @@ html, body {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  overflow: hidden; }
 
 .screensaver-vid {
   width: 100%; }
+
+.disappear {
+  opacity: 0;
+  visibility: none;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
 
 /*** Home ***/
 .content {
@@ -173,12 +181,6 @@ html, body {
     -webkit-backface-visibility: hidden; }
     .ss .slidephone img {
       width: 100%; }
-  .ss .disappear {
-    opacity: 0;
-    visibility: none;
-    -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease; }
   .ss .phoneani-off {
     opacity: 0;
     -webkit-transform: translateX(1000px) translateY(50px) scale(0.8);
@@ -253,7 +255,23 @@ html, body {
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+  .office .loader {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .office .loader img {
+      width: 100%;
+      -webkit-animation: spin 2s ease infinite;
+      animation: spin 2s ease infinite; }
 
 /*** Animations ***/
 @-webkit-keyframes shake-animation {
@@ -306,3 +324,12 @@ html, body {
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
