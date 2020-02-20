@@ -13,9 +13,10 @@
 
 
 <div class="screensaver">
-      <video class="screensaver-vid" muted loop>
+<!--       <video class="screensaver-vid" muted loop>
         <source src="imgs/screensaver.mp4" type="video/mp4">
-      </video> 
+      </video>  -->
+      <img src="http://mpadverts.azurewebsites.net/images/2020/Master-UK_Portrait.gif">
 </div>
 
 <div class="content">
@@ -64,7 +65,7 @@
 $( document ).ready(function() {
 
   // Set timeout function to show screensaver if inactive
-  ifvisible.setIdleDuration(60);
+  ifvisible.setIdleDuration(6);
   ifvisible.on("idle", function () {
     $('.screensaver').fadeIn('slow');
     $('.screensaver-vid').trigger('play');

@@ -44,6 +44,10 @@ html, body {
     top: 50%;
     transform: translateY(-50%);
     overflow: hidden;
+
+    img {
+    	width: 100%;
+    }
 }
 
 .screensaver-vid {

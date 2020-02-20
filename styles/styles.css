@@ -47,6 +47,8 @@ html, body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   overflow: hidden; }
+  .screensaver img {
+    width: 100%; }
 
 .screensaver-vid {
   width: 100%; }
