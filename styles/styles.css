@@ -93,6 +93,11 @@ html, body {
 .disappear {
   opacity: 0;
   visibility: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: -1;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease; }
@@ -279,8 +284,8 @@ html, body {
   background: #E55204;
   height: 100vh;
   overflow: hidden; }
-  .office svg {
-    width: 500px;
+  .office .logo {
+    width: 700px;
     position: absolute;
     top: 170px;
     left: 50%;

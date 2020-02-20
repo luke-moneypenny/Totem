@@ -96,6 +96,8 @@ html, body {
 .disappear {
 	opacity: 0;
 	visibility: none;
+	user-select: none;
+	z-index: -1;
 	transition: all 1s ease;
 }
 
@@ -294,8 +296,8 @@ html, body {
 	height: 100vh;
 	overflow: hidden;
 
-	svg {
-		width: 500px;
+	.logo {
+		width: 700px;
     	position: absolute; 
     	top: 170px;
     	left: 50%;
