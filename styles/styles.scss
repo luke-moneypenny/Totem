@@ -41,14 +41,13 @@ html, body {
     z-index: 999;
     display: none;
     background: #FFF;
-    top: 50%;
+    top: 49%;
     transform: translateY(-50%);
     overflow: hidden;
 }
 
 .screensaver-vid {
 	width: 100%;
-	transform: translateY(-20px);
 }
 
 .disappear {
