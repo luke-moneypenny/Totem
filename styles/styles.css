@@ -303,6 +303,8 @@ html, body {
       animation: spin 2s ease infinite;
       -webkit-animation-iteration-count: 1;
       animation-iteration-count: 1; }
+  .services .slick-track img {
+    height: auto; }
 
 /*** Animations ***/
 @-webkit-keyframes shake-animation {

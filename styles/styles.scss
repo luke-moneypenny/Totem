@@ -313,6 +313,12 @@ html, body {
 			animation-iteration-count: 1;
 		}
 	}
+
+	.slick-track {
+		img {
+			height: auto;
+		}
+	}
 }
 
 
