@@ -286,7 +286,34 @@ html, body {
 
 /*** Services ***/
 
+.services {
+	height: 100vh;
+	width: 100vw;
+	background-color: #E55204; 
+	position: relative;
 
+	.slickcontainer {
+		min-height: 100vh;
+		width: 101%;
+		top: 0;
+		transition: all 1s ease;
+	}
+
+	.loader {
+		width: 150px;
+		height: 150px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		img {
+			width: 100%;
+			animation: spin 2s ease infinite;
+			animation-iteration-count: 1;
+		}
+	}
+}
 
 
 /*** Animations ***/

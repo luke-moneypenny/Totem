@@ -276,6 +276,34 @@ html, body {
       animation-iteration-count: 1; }
 
 /*** Services ***/
+.services {
+  height: 100vh;
+  width: 100vw;
+  background-color: #E55204;
+  position: relative; }
+  .services .slickcontainer {
+    min-height: 100vh;
+    width: 101%;
+    top: 0;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+  .services .loader {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .services .loader img {
+      width: 100%;
+      -webkit-animation: spin 2s ease infinite;
+      animation: spin 2s ease infinite;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1; }
+
 /*** Animations ***/
 @-webkit-keyframes shake-animation {
   0% {
