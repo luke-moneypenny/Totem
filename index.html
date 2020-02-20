@@ -40,9 +40,11 @@
 				<p>Our stunning<br>home</p>
 			</div>
 		</a>
-		<div class="pod services">
-			<p>Our<br>services</p>
-		</div>
+		<a href="pages/services.html">
+			<div class="pod services">
+				<p>Our<br>services</p>
+			</div>
+		</a>
 	</section>
 
 	<section id="game" class="game">
@@ -62,7 +64,7 @@
 $( document ).ready(function() {
 
   // Set timeout function to show screensaver if inactive
-  ifvisible.setIdleDuration(10);
+  ifvisible.setIdleDuration(60);
   ifvisible.on("idle", function () {
     $('.screensaver').fadeIn('slow');
     $('.screensaver-vid').trigger('play');

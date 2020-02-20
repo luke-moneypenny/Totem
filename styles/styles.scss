@@ -279,9 +279,14 @@ html, body {
 		img {
 			width: 100%;
 			animation: spin 2s ease infinite;
+			animation-iteration-count: 1;
 		}
 	}
 }
+
+/*** Services ***/
+
+
 
 
 /*** Animations ***/

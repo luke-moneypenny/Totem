@@ -271,8 +271,11 @@ html, body {
     .office .loader img {
       width: 100%;
       -webkit-animation: spin 2s ease infinite;
-      animation: spin 2s ease infinite; }
+      animation: spin 2s ease infinite;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1; }
 
+/*** Services ***/
 /*** Animations ***/
 @-webkit-keyframes shake-animation {
   0% {
