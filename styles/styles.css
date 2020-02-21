@@ -41,6 +41,7 @@ html, body {
   height: 101vh;
   z-index: 9999;
   top: 50%;
+  display: none;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -54,38 +55,6 @@ html, body {
   -webkit-transition-duration: .5s;
   -o-transition-duration: .5s;
   transition-duration: .5s; }
-  .screensaver img {
-    width: 700px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%); }
-  .screensaver .taptostart {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top: 50%; }
-    .screensaver .taptostart p {
-      color: #FFF;
-      font-size: 42px;
-      font-family: 'Lato', sans-serif; }
-    .screensaver .taptostart svg {
-      -webkit-animation: shake-animation 5s ease infinite;
-      animation: shake-animation 5s ease infinite; }
-
-.orange {
-  background: #E55204; }
-
-.purple {
-  background: #731266; }
-
-.yellow {
-  background: #FD9F0A; }
-
-.teal {
-  background: #00AFAA; }
 
 .screensaver-vid {
   width: 100%; }
